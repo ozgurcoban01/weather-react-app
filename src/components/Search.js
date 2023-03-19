@@ -10,16 +10,10 @@ const Search = () => {
 
     const dispatch=useDispatch();
 
-    const [search,setSearch]=useState();  
-
-    useEffect(()=>{
-        dispatch(searchSet(search))
-        console.log(search)
-    },[search])
 
   return (
     <div className='searchContainer'>
-       <input className='searchBar'  type="text" onChange={(e)=>{setSearch(e.target.value)}}>
+       <input className='searchBar'  type="text" onChange={(e)=>{dispatch(searchSet(e.target.value))}}>
        
        </input>
     </div>
