@@ -1,4 +1,59 @@
 .App {
-  font-family: sans-serif;
-  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+}
+.searchContainer {
+  margin-top: 40px;
+  width: 100vw;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchBar {
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 1000px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.2s;
+
+  caret-color: rgba(255, 255, 255, 0.5);
+  background-image: url("https://img.icons8.com/pastel-glyph/64/FFFFFF/search--v2.png");
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: center;
+  color: transparent;
+}
+.searchBar:hover {
+  height: 55px;
+  width: 55px;
+  border: none;
+  background-color: rgba(1, 1, 1, 0.2);
+}
+.searchBar:focus {
+  background-image: none;
+  color: white;
+  height: 55px;
+  width: 300px;
+  border: none;
+  padding: 0 20px;
+  background-color: rgba(1, 1, 1, 0.5);
+}
+.contentContainer{
+  margin-top: 20px;
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
 }
