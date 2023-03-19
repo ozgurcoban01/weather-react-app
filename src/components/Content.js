@@ -5,8 +5,7 @@ import axios from "axios";
 
 const Content = () => {
   const dispatch = useDispatch();
-  const weatherr = useSelector((state) => state.weather.value);
-
+  const weather = useSelector((state) => state.weather.value);
   const fetchApi = async () => {
     await axios
       .get(
@@ -18,13 +17,20 @@ const Content = () => {
   useEffect(() => {
     fetchApi();
   }, []);
-console.log(weatherr)
+
+  
+  if(weather==null){
+    return(
+      <div>Yükleniyor</div>
+    )
+  }
+ 
   return <div className="contentContainer">
-    {weatherr.name}<br></br>
-    {weatherr.main.temp}<br></br>
-    {weatherr.id}<br></br>
-    {weatherr.weather[0].description}<br></br>
-  </div>;
+    {weather.id}<br></br>
+    {weather.name}<br></br>
+    {weather.weather[0].description}<br></br>
+    {weather.main.temp}<br></br>
+    </div>;
 };
 
 export default Content;
