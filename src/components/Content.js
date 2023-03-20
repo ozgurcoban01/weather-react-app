@@ -8,32 +8,44 @@ const Content = () => {
   const dispatch = useDispatch();
 
   const weather = useSelector((state) => state.weather.value);
-  const country = useSelector((state) => state.search.value);
+  const search = useSelector((state) => state.search.value);
 
-  const [ct, setCt] = useState("İstanbul");
+  const [ctName, setCtName] = useState();
   const [allcities, setAllCities] = useState([]);
 
-  const fetchApi = async () => {
+  const fetchApi = async (lat, lon) => {
     await axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=istanbul&units=metric&lang=tr&appid=c2a2d1a959b551a9b3601e32bbdeb808`
+        `api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&lang=tr&appid=c2a2d1a959b551a9b3601e32bbdeb808`
       )
-      .then((res) => console.log(console.log(res.data)));
+      .then((res) => dispatch(setWeather(res.data)));
   };
 
   useEffect(() => {
- 
-  }, []); 
+    const word = search.toLowerCase();
+    setCtName(word);
+  }, [search]);
 
-  useEffect(() => {
-    fetchApi()
-  }, [country]);
+  const cityCheck = (city) => {
+    const word = city.name;
+    const wordd = word.toLowerCase();
+    console.log(ctName+" "+wordd+" "+wordd.includes(ctName))
+    return wordd.includes(ctName);
+  };
 
-  if (weather == null) {
-    return <div>Yükleniyor</div>;
-  }
-
-  return <div className="contentContainer"></div>;
+  return (
+    <div className="contentContainer">
+      <div className="cityContainer">
+        {cityNamesTurkey.map((city) =>
+          cityCheck(city) ? (
+            <div className="city">
+              {city.id} {city.name}
+            </div>
+          ) : null
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default Content;

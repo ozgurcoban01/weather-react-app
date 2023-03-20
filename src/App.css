@@ -1,22 +1,25 @@
 .App {
-  height: 100%;
-  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   background-color: blue;
   color: white;
   display: flex;
   justify-content: start;
   flex-direction: column;
   align-items: center;
+
 }
 .searchContainer {
   margin-top: 40px;
+  margin-bottom: 20px;
   width: 100vw;
-  height: 65px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .searchBar {
+
   cursor: pointer;
   outline: none;
   -webkit-appearance: none;
@@ -28,7 +31,6 @@
   border: none;
   background-color: rgba(255, 255, 255, 0.3);
   transition: 0.2s;
-
   caret-color: rgba(255, 255, 255, 0.5);
   background-image: url("https://img.icons8.com/pastel-glyph/64/FFFFFF/search--v2.png");
   background-repeat: no-repeat;
@@ -37,22 +39,59 @@
   color: transparent;
 }
 .searchBar:hover {
-  height: 55px;
-  width: 55px;
+  height: 50px;
+  width: 50px;
   border: none;
   background-color: rgba(1, 1, 1, 0.2);
+
 }
 .searchBar:focus {
   background-image: none;
   color: white;
-  height: 55px;
+  height: 50px;
   width: 300px;
   border: none;
   padding: 0 20px;
   background-color: rgba(1, 1, 1, 0.5);
-}
-.content{
-  margin: 20px;
+  cursor: auto;
 
+}
+.content {
+  margin: 20px;
   background-color: red;
+}
+
+.contentContainer {
+
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.cityContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: center;
+}
+.city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  width: 200px;
+  height: 80px;
+  background-color: rgb(7, 7, 7);
+  margin: 5px;
+  font-size: larger;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.1s;
+
+}
+.city:hover {
+
+  background-color: rgb(126, 0, 0);
+
 }
