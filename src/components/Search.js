@@ -5,6 +5,7 @@ import { weatherSet } from "../redux/features/weatherSlice";
 import { searchSet } from "../redux/features/searchSlice";
 import { setContentChange } from "../redux/features/contentChangeSlice";
 import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
+import { setVideoType } from "../redux/features/videoTypeSlice";
 
 const Search = () => {
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ const Search = () => {
     } else {
       dispatch(setContentChange("back"));
     }
+    dispatch(setVideoType("main"))
   };
 
   return (

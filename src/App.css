@@ -44,7 +44,7 @@
   border-radius: 1000px;
   border: none;
   background-color: rgba(7, 7, 7, 0.25);
-  transition: 0.2s cubic-bezier(0.765, 0.490, 0.020, 1.650);
+  transition: 0.2s cubic-bezier(0.765, 0.49, 0.02, 1.65);
   caret-color: rgba(255, 255, 255, 0.5);
   background-image: url("https://img.icons8.com/pastel-glyph/64/FFFFFF/search--v2.png");
   background-repeat: no-repeat;
@@ -57,7 +57,7 @@
   height: 50px;
   width: 50px;
   border: none;
-  background-color: rgba(1, 1, 1, 0.2);
+ background-color: rgba(7, 7, 7, 0.25);
 }
 .searchBar:focus {
   background-image: none;
@@ -81,6 +81,7 @@
   display: flex;
   justify-content: center;
   width: 100vw;
+  padding: 1% 0 2% 0;
 }
 .cityContainer {
   display: flex;
@@ -88,7 +89,6 @@
   flex-wrap: wrap;
   width: 80%;
   justify-content: center;
-
 }
 .city {
   display: flex;
@@ -132,7 +132,6 @@
   backdrop-filter: blur(10px);
 }
 .backList {
-
   z-index: 3;
   margin-top: 3%;
   position: absolute;
@@ -143,31 +142,29 @@
   left: 10vw;
   height: 30px;
   width: 100px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(7, 7, 7, 0.25);
   padding: 0;
   border-radius: 1000px;
   cursor: pointer;
-  transition: 0.3s cubic-bezier(0.765, 0.490, 0.020, 1.650);
+  transition: 0.3s cubic-bezier(0.765, 0.49, 0.02, 1.65);
   color: rgba(255, 255, 255, 0.2);
-
 }
-.backList:hover{
+.backList:hover {
   opacity: 1;
   color: rgba(255, 255, 255, 1);
 }
-.backList:focus{
+.backList:focus {
   opacity: 1;
   background-color: rgba(255, 255, 255, 1);
 }
 .weatherContainer {
-  padding-top:3% ;
+  padding-top: 3%;
   position: absolute;
   width: 100vw;
   height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.3s cubic-bezier(0.765, 0.490, 0.020, 1.650);
 }
 
 .weatherContent {
@@ -176,6 +173,7 @@
 }
 
 .weatherLayer1 {
+
   height: 60%;
   width: 100%;
   display: flex;
@@ -185,7 +183,7 @@
 
 .weatherBigContentLayer1 {
   backdrop-filter: blur(20px);
-  background-color: rgba(255, 255, 255, 0.195);
+  background-color: rgba(0, 0, 0, 0.2);
   height: 100%;
   width: 30%;
   display: flex;
@@ -193,15 +191,14 @@
   align-items: center;
   justify-content: space-evenly;
   border-radius: 30px;
+
 }
 .weatherIcon {
-  background-color: rgba(255, 255, 255, 0.195);
   height: 50%;
   width: 60%;
   border-radius: 30px;
 }
 .weatherDegree {
-  background-color: rgba(255, 255, 255, 0.195);
   height: 20%;
   width: 80%;
   border-radius: 30px;
@@ -215,14 +212,18 @@
   flex-direction: column;
 }
 .weatherDetail {
-  background-color: rgba(255, 255, 255, 0.195);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
   height: 20%;
-  width: 100%;
+  width: 40%;
+  padding: 0 3%;
   border-radius: 30px;
   backdrop-filter: blur(20px);
 }
 .weatherGraph {
-  background-color: rgba(255, 255, 255, 0.195);
+  background-color: rgba(0, 0, 0, 0.2);
   height: 70%;
   width: 100%;
   backdrop-filter: blur(20px);
@@ -236,9 +237,9 @@
   width: 100%;
 }
 .nextDay {
-  background-color: rgba(255, 255, 255, 0.195);
+  background-color: rgba(0, 0, 0, 0.2);
   height: 60%;
-  width: 15%;
+  width: 20%;
   backdrop-filter: blur(20px);
   border-radius: 30px;
 }
@@ -246,4 +247,215 @@
   opacity: 0;
   visibility: hidden;
 }
+.noBackground {
+  background-color: transparent;
+}
+.weatherIcon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.weatherCityName {
+  font-size: xx-large;
+  font-weight: 300;
+  padding-bottom: 5%;
+  padding-top: 50%;
+}
+.weatherDegree {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: x-large;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.7);
+  padding-top: 20%;
+}
+.fullVideo {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.detailIcon {
+  padding-right: 7%;
+}
+.weatherDetail {
+  display: flex;
+  align-items: center;
+}
+.nextDay {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nx {
+}
+.nextDayIcon {
+  width: 30%;
+  height: 100%;
+  padding-top: 20%;
 
+}
+.nextDayDetail {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.nextDayName {
+
+  font-size: medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20%;
+}
+.nextDayDegree {
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 40%;
+}
+.weatherCityIcon{
+  margin-top: 10%;
+}
+.weatherGraph{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.chart{
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .cityContainer{
+    flex-direction: row;
+    width: 100vw;
+  }
+  .city{
+    padding: 0;
+    width: 40%;
+    font-size: large;
+  }
+  .weatherContainer{
+    width: 100vw;
+    height: auto;
+  }
+  .weatherContent{
+    flex-direction: column;
+  }
+  .weatherLayer1{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .weatherBigContentLayer1{
+    width: 100%;
+    border-bottom: 5%;
+  }
+  .weatherBigContentLayer2{
+    margin: 5% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+  }
+  .weatherDetail{
+    width: 80vw;
+  }
+  .weatherGraph{
+    margin: 5% 0;
+    width: 80vw;
+    height: 30vh;
+  }
+  .weatherBigContentLayer{
+    width: 100%;  
+  }
+  .weatherLayer2{
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 5%;
+    align-items: center;
+    justify-content: center;
+  }
+  .nextDay{
+    width: 46%;
+    margin: 1%;
+  }
+  .weatherBigContentLayer1{
+    width: 80vw;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5% 0;
+  }
+  .weatherIcon{
+
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .weatherCityName{
+
+    padding: 0;
+    margin: 0;
+
+  }
+  .weatherCityIcon{
+
+
+    padding: 0;
+    margin: 0;
+    padding-top: 5%;
+  }
+  .weatherDegree{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  .nextDay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom:5% ;
+    
+  }
+  .nextDayIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+height: 60%;
+    padding-top:10% ;
+    padding-bottom:10% ;
+    margin: 0;
+  }
+  .nextDayDetail{
+    text-align: center;
+  }
+  .nextDayName{
+    font-size: 80%;
+    font-weight: 300;
+  }
+  .nextDayDegree{
+    font-size: x-large;
+  }
+  .nextdayonload{
+    height: 100px;
+  }
+}
